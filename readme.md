@@ -4,7 +4,7 @@ Did you know github doesn't provide a search filter to see who merged a PR?
 
 Are you missing out on sweet sweet maintainer street cred by not knowing how many PRs you've merged on a particular repo?
 
-Then you've find the right obscure single source file repo to solve all your problems!
+Then you've found the right obscure, single-source-file repo to solve all your problems!
 
 # Setup
 
