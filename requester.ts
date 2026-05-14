@@ -3,6 +3,7 @@ import {createClient, fetchExchange, gql} from "urql/core"
 import {PullRequest, Dictionary} from './types'
 
 dotenv.config()
+const page_limit = Infinity
 
 const client = createClient(
     {
@@ -21,10 +22,8 @@ const client = createClient(
         }
     }
 )
-const page_limit = Infinity
 
 async function get_all_merged_prs(): Promise<PullRequest[]> {
-    //todo: load this from a file
     const query = gql`
     query PullRequests($repo_name: String!, $repo_owner: String!, $next_cursor: String) {
 	    repository(owner:$repo_owner name: $repo_name) {
