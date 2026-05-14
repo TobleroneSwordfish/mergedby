@@ -1,19 +1,8 @@
 import dotenv from "dotenv"
 import {createClient, fetchExchange, gql} from "urql/core"
+import {PullRequest, Dictionary} from './types'
 
 dotenv.config()
-
-interface PullRequest {
-    number: number
-    mergedBy: User
-}
-interface User {
-    login: string
-}
-
-interface Dictionary<T> {
-    [key: string]: T
-}
 
 const client = createClient(
     {
